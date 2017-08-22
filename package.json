@@ -1,0 +1,41 @@
+{
+  "name": "@bbc/http-transport-to-error",
+  "version": "1.0.0",
+  "description": "Converts 4XX and 5XX responses to errors",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "lint": "eslint .",
+    "coverage": "istanbul cover _mocha -- -R dot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbc/http-transport-to-error.git"
+  },
+  "author": "ibl-team@lists.forge.bbc.co.uk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbc/http-transport-to-error/issues"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "homepage": "https://github.com/bbc/http-transport-to-error",
+  "devDependencies": {
+    "eslint-config-iplayer-es6": "^1.3.0",
+    "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.4.0",
+    "coveralls": "^2.11.9",
+    "eslint": "^3.11.1",
+    "istanbul": "^0.4.2",
+    "jsdoc": "^3.4.3",
+    "lodash": "^4.17.4",
+    "mocha": "^3.0.2",
+    "nock": "^9.0.4",
+    "sinon": "^1.15.3",
+    "http-transport": "git@github.com:bbc/http-transport.git"
+  },
+  "eslintConfig": {
+    "extends": "iplayer-es6"
+  }
+}
