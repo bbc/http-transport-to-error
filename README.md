@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/bbc/http-transport-to-error.svg)](https://travis-ci.org/bbc/http-transport-to-error) [![Coverage Status](https://coveralls.io/repos/github/bbc/http-transport-to-error/badge.svg?branch=master)](https://coveralls.io/github/bbc/http-transport-to-error?branch=master)
 
-# HttpTransportToError
+# http-transport-to-error
 
 > Middleware convert 4XX and 5XX responses to errors
 
