@@ -1,6 +1,6 @@
 {
   "name": "@bbc/http-transport-to-error",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Converts 4XX and 5XX responses to errors",
   "main": "index.js",
   "scripts": {
@@ -32,7 +32,7 @@
     "mocha": "^3.0.2",
     "nock": "^9.0.4",
     "sinon": "^1.15.3",
-    "http-transport": "git@github.com:bbc/http-transport.git"
+    "@bbc/http-transport": "0.0.1"
   },
   "eslintConfig": {
     "extends": "iplayer-es6"

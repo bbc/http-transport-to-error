@@ -3,7 +3,7 @@
 const assert = require('chai').assert;
 const nock = require('nock');
 
-const HttpTransport = require('http-transport');
+const HttpTransport = require('@bbc/http-transport');
 const toError = require('../lib/toError');
 
 const host = 'http://www.example.com';
