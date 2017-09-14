@@ -14,7 +14,9 @@ const textResponseBody = 'inimicum tuum';
 
 function assertFailure(promise, message) {
   return promise
-    .then(() => assert.ok(false, 'Promise should have failed'))
+    .then(() => {
+      assert.ok(false, 'Promise should have failed')
+    })
     .catch((e) => {
       assert.ok(e);
       if (message) {
@@ -33,7 +35,7 @@ function assertErrorResponse(code) {
     .get(url)
     .asBody();
 
-  return assertFailure(response, 'Request failed for GET http://www.example.com/foo');
+  return assertFailure(response, `Received HTTP code ${code} for GET http://www.example.com/foo`);
 }
 
 describe('toError', () => {
@@ -44,11 +46,11 @@ describe('toError', () => {
   });
 
   it('returns an error for 4XX responses', () => {
-    assertErrorResponse(400);
+    return assertErrorResponse(400);
   });
 
   it('returns an error for 5XX responses', () => {
-    assertErrorResponse(500);
+    return assertErrorResponse(500);
   });
 
   it('does not convert to error for 2XX responses', () => {
