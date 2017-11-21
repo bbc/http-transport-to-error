@@ -32,7 +32,7 @@
     "mocha": "^3.0.2",
     "nock": "^9.0.4",
     "sinon": "^1.15.3",
-    "@bbc/http-transport": "0.0.1"
+    "@bbc/http-transport": "^1.0.0"
   },
   "eslintConfig": {
     "extends": "iplayer-es6"
