@@ -7,7 +7,7 @@
 ## Installation
 
 ```
-npm install --save http-transport-to-error
+npm install --save @bbc/http-transport-to-error
 ```
 
 ## Usage
@@ -16,16 +16,18 @@ npm install --save http-transport-to-error
 Convert any response equal to or greater than 400 to errors: 
 
 const url = 'http://example.com/404';
-const HttpTransport = require('http-transport');
-const toError = require('http-transport-to-error');
+const HttpTransport = require('@bbc/http-transport');
+const toError = require('@bbc/http-transport-to-error');
 
-HttpTransport.createClient()
-   .useGlobal(toError())
-   .get(url)
-   .asResponse()
-   .catch((err) => {
-    console.error(err);
-   });
+const client = HttpTransport.createBuilder()
+   .use(toError())
+   .createClient();
+
+  try {
+    client.get(url).asResponse();
+  } catch (err) {
+    console.error(err);    
+  }
 });
 ```
 

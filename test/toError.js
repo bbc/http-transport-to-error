@@ -12,30 +12,31 @@ const url = `${host}${path}`;
 const api = nock(host);
 const textResponseBody = 'inimicum tuum';
 
-function assertFailure(promise, message) {
-  return promise
-    .then(() => {
-      assert.ok(false, 'Promise should have failed')
-    })
-    .catch((e) => {
-      assert.ok(e);
-      if (message) {
-        assert.equal(e.message, message);
-      }
-    });
+async function assertFailure(promise, message) {
+  try {
+    await promise;
+    assert.ok(false, 'Promise should have failed')
+  } catch (e) {
+    assert.ok(e);
+    if (message) {
+      assert.equal(e.message, message);
+    }
+  }
 }
 
-function assertErrorResponse(code) {
+async function assertErrorResponse(code) {
   nock.cleanAll();
   api.get(path).reply(code);
 
-  const client = HttpTransport.createClient();
+  const client = HttpTransport.createBuilder()
+    .use(toError())
+    .createClient();
+
   const response = client
-    .useGlobal(toError())
     .get(url)
     .asBody();
 
-  return assertFailure(response, `Received HTTP code ${code} for GET http://www.example.com/foo`);
+  return await assertFailure(response, `Received HTTP code ${code} for GET http://www.example.com/foo`);
 }
 
 describe('toError', () => {
@@ -53,18 +54,18 @@ describe('toError', () => {
     return assertErrorResponse(500);
   });
 
-  it('does not convert to error for 2XX responses', () => {
+  it('does not convert to error for 2XX responses', async () => {
     nock.cleanAll();
     api.get(path).reply(200, textResponseBody);
 
-    const client = HttpTransport.createClient();
-    return client
-      .useGlobal(toError())
+    const client = HttpTransport.createBuilder()
+      .use(toError())
+      .createClient()
+
+    const res = await client
       .get(url)
-      .asResponse()
-      .catch(assert.ifError)
-      .then((res) => {
-        assert.equal(res.statusCode, 200);
-      });
+      .asResponse();
+
+    assert.equal(res.statusCode, 200);
   });
 });
