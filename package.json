@@ -1,6 +1,6 @@
 {
   "name": "@bbc/http-transport-to-error",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Converts 4XX and 5XX responses to errors",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
     "url": "https://github.com/bbc/http-transport-to-error/issues"
   },
   "engines": {
-    "node": ">=4.0.0"
+    "node": ">=8.0.0"
   },
   "homepage": "https://github.com/bbc/http-transport-to-error",
   "devDependencies": {
@@ -32,7 +32,7 @@
     "mocha": "^3.0.2",
     "nock": "^9.0.4",
     "sinon": "^1.15.3",
-    "@bbc/http-transport": "^1.0.0"
+    "@bbc/http-transport": "^2.0.0"
   },
   "eslintConfig": {
     "extends": "iplayer-es6"
