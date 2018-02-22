@@ -24,7 +24,7 @@ const client = HttpTransport.createBuilder()
    .createClient();
 
   try {
-    client.get(url).asResponse();
+    await client.get(url).asResponse();
   } catch (err) {
     console.error(err);    
   }
