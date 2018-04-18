@@ -34,6 +34,9 @@
     "sinon": "^1.15.3",
     "@bbc/http-transport": "^2.0.0"
   },
+  "peerDependencies": {
+    "@bbc/http-transport": "3.x"
+  },
   "eslintConfig": {
     "extends": "iplayer-es6"
   }
