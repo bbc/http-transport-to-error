@@ -1,4 +1,9 @@
-[![Build Status](https://travis-ci.org/bbc/http-transport-to-error.svg)](https://travis-ci.org/bbc/http-transport-to-error) [![Coverage Status](https://coveralls.io/repos/github/bbc/http-transport-to-error/badge.svg?branch=master)](https://coveralls.io/github/bbc/http-transport-to-error?branch=master)
+[![NPM downloads](https://img.shields.io/npm/dm/@bbc/http-transport-to-error.svg?style=flat)](https://npmjs.org/package/@bbc/http-transport-to-error)
+![npm](https://img.shields.io/npm/v/@bbc/http-transport-to-error.svg)
+ ![license](https://img.shields.io/badge/license-MIT-blue.svg) 
+![github-issues](https://img.shields.io/github/issues/bbc/http-transport-to-error.svg)
+![stars](https://img.shields.io/github/stars/bbc/http-transport-to-error.svg)
+![forks](https://img.shields.io/github/forks/bbc/http-transport-to-error.svg)
 
 # http-transport-to-error
 
