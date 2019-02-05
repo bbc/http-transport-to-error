@@ -21,18 +21,18 @@
   },
   "homepage": "https://github.com/bbc/http-transport-to-error",
   "devDependencies": {
-    "eslint-config-iplayer-es6": "^1.3.0",
+    "@bbc/http-transport": "^3.4.2",
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.4.0",
-    "coveralls": "^2.11.9",
+    "coveralls": "^3.0.2",
     "eslint": "^3.11.1",
+    "eslint-config-iplayer-es6": "^1.3.0",
     "istanbul": "^0.4.2",
     "jsdoc": "^3.4.3",
     "lodash": "^4.17.4",
-    "mocha": "^3.0.2",
+    "mocha": "^5.2.0",
     "nock": "^9.0.4",
-    "sinon": "^1.15.3",
-    "@bbc/http-transport": "^2.0.0"
+    "sinon": "^1.15.3"
   },
   "peerDependencies": {
     "@bbc/http-transport": "3.x"
