@@ -1,4 +1,5 @@
 [![NPM downloads](https://img.shields.io/npm/dm/@bbc/http-transport-to-error.svg?style=flat)](https://npmjs.org/package/@bbc/http-transport-to-error)
+[![Build Status](https://api.travis-ci.org/bbc/http-transport-to-error.svg)](https://travis-ci.org/bbc/http-transport-to-error) 
 ![npm](https://img.shields.io/npm/v/@bbc/http-transport-to-error.svg)
  ![license](https://img.shields.io/badge/license-MIT-blue.svg) 
 ![github-issues](https://img.shields.io/github/issues/bbc/http-transport-to-error.svg)
