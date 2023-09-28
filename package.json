@@ -25,7 +25,7 @@
     "chai": "^3.5.0",
     "codeclimate-test-reporter": "^0.5.1",
     "coveralls": "^3.0.2",
-    "eslint": "^4.19.1",
+    "eslint": "^8.50.0",
     "eslint-config-iplayer": "^6.2.1",
     "istanbul": "^0.4.2",
     "jsdoc": "^3.6.3",
