@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha",
     "lint": "eslint .",
-    "coverage": "istanbul cover _mocha -- -R dot"
+    "coverage": "nyc npm run test",
+    "posttest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -21,23 +22,18 @@
   },
   "homepage": "https://github.com/bbc/http-transport-to-error",
   "devDependencies": {
-    "@bbc/http-transport": "^3.4.2",
+    "@bbc/http-transport": "^4.3.0",
     "chai": "^3.5.0",
-    "codeclimate-test-reporter": "^0.5.1",
-    "coveralls": "^3.0.2",
     "eslint": "^4.19.1",
     "eslint-config-iplayer": "^6.2.1",
-    "istanbul": "^0.4.2",
-    "jsdoc": "^3.6.3",
-    "lodash": "^4.17.15",
-    "mocha": "^5.2.0",
-    "nock": "^9.0.4",
-    "sinon": "^1.15.3"
+    "mocha": "^10.2.0",
+    "nock": "^13.3.3",
+    "nyc": "^15.1.0"
   },
   "peerDependencies": {
-    "@bbc/http-transport": "3.x"
+    "@bbc/http-transport": "^4.3.0"
   },
   "eslintConfig": {
-    "extends": "iplayer-es6"
+    "extends": "iplayer"
   }
 }
