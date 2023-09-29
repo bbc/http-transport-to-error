@@ -1,6 +1,6 @@
 {
   "name": "@bbc/http-transport-to-error",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Converts 4XX and 5XX responses to errors",
   "main": "index.js",
   "scripts": {
