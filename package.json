@@ -31,7 +31,7 @@
     "nyc": "^15.1.0"
   },
   "peerDependencies": {
-    "@bbc/http-transport": "^4.3.0"
+    "@bbc/http-transport": "^3 ^4"
   },
   "eslintConfig": {
     "extends": "iplayer"
