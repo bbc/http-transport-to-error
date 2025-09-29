@@ -23,7 +23,7 @@
   "devDependencies": {
     "@bbc/http-transport": "^4.3.0",
     "chai": "^3.5.0",
-    "eslint": "^4.19.1",
+    "eslint": "^9.36.0",
     "eslint-config-iplayer": "^6.2.1",
     "mocha": "^10.2.0",
     "nock": "^13.3.3",
