@@ -4,9 +4,9 @@
   "description": "Converts 4XX and 5XX responses to errors",
   "main": "index.js",
   "scripts": {
-    "test": "mocha && npm run lint",
+    "test": "mocha && pnpm run lint",
     "lint": "eslint .",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc pnpm run test"
   },
   "repository": {
     "type": "git",

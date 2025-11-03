@@ -1,5 +1,5 @@
-[![NPM downloads](https://img.shields.io/npm/dm/@bbc/http-transport-to-error.svg?style=flat)](https://npmjs.org/package/@bbc/http-transport-to-error)
-![npm](https://img.shields.io/npm/v/@bbc/http-transport-to-error.svg)
+[![NPM downloads](https://img.shields.io/pnpm/dm/@bbc/http-transport-to-error.svg?style=flat)](https://npmjs.org/package/@bbc/http-transport-to-error)
+![pnpm](https://img.shields.io/pnpm/v/@bbc/http-transport-to-error.svg)
  ![license](https://img.shields.io/badge/license-MIT-blue.svg) 
 ![github-issues](https://img.shields.io/github/issues/bbc/http-transport-to-error.svg)
 ![stars](https://img.shields.io/github/stars/bbc/http-transport-to-error.svg)
@@ -12,7 +12,7 @@
 ## Installation
 
 ```
-npm install --save @bbc/http-transport-to-error
+pnpm install --save @bbc/http-transport-to-error
 ```
 
 ## Usage
@@ -39,11 +39,11 @@ const client = HttpTransport.createBuilder()
 ## Test
 
 ```
-npm test
+pnpm test
 ```
 
 To generate a test coverage report:
 
 ```
-npm run coverage
+pnpm run coverage
 ```
