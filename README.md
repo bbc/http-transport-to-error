@@ -12,7 +12,7 @@
 ## Installation
 
 ```
-npm install --save @bbc/http-transport-to-error
+pnpm install --save @bbc/http-transport-to-error
 ```
 
 ## Usage
@@ -39,11 +39,11 @@ const client = HttpTransport.createBuilder()
 ## Test
 
 ```
-npm test
+pnpm test
 ```
 
 To generate a test coverage report:
 
 ```
-npm run coverage
+pnpm run coverage
 ```
