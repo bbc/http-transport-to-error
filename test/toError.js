@@ -1,6 +1,6 @@
 'use strict';
+/* eslint-env jest */
 
-const assert = require('chai').assert;
 const nock = require('nock');
 
 const HttpTransport = require('@bbc/http-transport');
@@ -19,15 +19,9 @@ async function assertErrorResponse(code) {
     .use(toError())
     .createClient();
 
-  try {
-    await client
-      .get(url)
-      .asResponse();
-    assert.ok(false, 'Promise should have failed');
-  } catch (e) {
-    assert.ok(e);
-    assert.equal(e.message, `Received HTTP code ${code} for GET http://www.example.com/foo`);
-  }
+  await expect(client.get(url).asResponse()).rejects.toThrow(
+    `Received HTTP code ${code} for GET http://www.example.com/foo`
+  );
 }
 
 describe('toError', () => {
@@ -55,6 +49,6 @@ describe('toError', () => {
       .get(url)
       .asResponse();
 
-    assert.equal(res.statusCode, 200);
+    expect(res.statusCode).toBe(200);
   });
 });
