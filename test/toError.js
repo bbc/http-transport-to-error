@@ -1,4 +1,3 @@
-'use strict';
 /* eslint-env jest */
 
 const nock = require('nock');
@@ -15,9 +14,7 @@ const textResponseBody = 'inimicum tuum';
 async function assertErrorResponse(code) {
   api.get(path).reply(code);
 
-  const client = HttpTransport.createBuilder()
-    .use(toError())
-    .createClient();
+  const client = HttpTransport.createBuilder().use(toError()).createClient();
 
   await expect(client.get(url).asResponse()).rejects.toThrow(
     `Received HTTP code ${code} for GET http://www.example.com/foo`
@@ -41,13 +38,9 @@ describe('toError', () => {
   it('does not convert to error for 2XX responses', async () => {
     api.get(path).reply(200, textResponseBody);
 
-    const client = HttpTransport.createBuilder()
-      .use(toError())
-      .createClient();
+    const client = HttpTransport.createBuilder().use(toError()).createClient();
 
-    const res = await client
-      .get(url)
-      .asResponse();
+    const res = await client.get(url).asResponse();
 
     expect(res.statusCode).toBe(200);
   });
