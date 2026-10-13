@@ -1,5 +1,3 @@
-/* eslint-env jest */
-
 const nock = require('nock');
 
 const HttpTransport = require('@bbc/http-transport');
