@@ -1,0 +1,24 @@
+# Tests & coverage
+test
+coverage
+*.log
+.nyc_output
+
+# CI & GitHub config
+.github
+
+# Editor/OS config
+.vscode
+.idea
+.DS_Store
+
+# Lint/format config
+biome.json
+
+# Package manager files
+pnpm-lock.yaml
+pnpm-workspace.yaml
+.npmrc
+
+# Project docs (not needed in published package)
+CONTRIBUTING.md
